@@ -43,21 +43,34 @@ Alchemy::start($this);
 				</div>
 			</div>
 
-			<div id="mt-template-content" class="<?php echo ! $this->countModules('right') ? 'wide' : ''; ?>">
-				<div class="in">
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
+			<div id="mt-template-main">
+
+				<?php if ($this->countModules('user1') OR $this->countModules('user2')): ?>
+				<div id="mt-template-box1">
+					<jdoc:include type="modules" name="user1" style="section" />
+				</div>
+				<div id="mt-template-box2">
+					<jdoc:include type="modules" name="user2" style="section" />
+				</div>
+				<div class="maindivider"></div>
+				<?php endif; ?>
+				<div id="mt-template-content" class="<?php echo ! $this->countModules('right') ? 'wide' : ''; ?>">
+					<div class="in">
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
+
+					<div id="mt-template-content-footer">
+						<jdoc:include type="modules" name="footer" style="section" />
+					</div>
 				</div>
 
-				<div id="mt-template-content-footer">
-					<jdoc:include type="modules" name="footer" style="section" />
+				<div id="mt-template-sidebar-right">
+					<div class="in">	
+						<jdoc:include type="modules" name="right" style="section" />
+					</div>
 				</div>
-			</div>
-
-			<div id="mt-template-sidebar-right">
-				<div class="in">	
-					<jdoc:include type="modules" name="right" style="section" />
-				</div>
+			
 			</div>
 			<div class="clr"></div>
 		</div>

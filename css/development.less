@@ -132,16 +132,32 @@ body {
 	padding: 8px;
 }
 
-#mt-template-sidebar-right {
-	.grid_span(5);
-	.grid_left();
-	.grid_gap_left();
-}
-
 #mt-template-sidebar-left {
 	.grid_span(5);
 	.grid_left();
 	.grid_gap_right();
+}
+
+#mt-template-main {
+	.grid_span(18);
+	.grid_right();
+
+	.maindivider { clear:both;border-bottom: 1px solid #ccc; padding-top: 10px;margin-bottom: 10px;}
+}
+
+#mt-template-box1,
+#mt-template-box2 {
+	.grid_span(7);
+	.grid_left();
+	margin-left: 20px;
+}
+
+#mt-template-box1 { border-right: 1px solid #ccc; }
+
+#mt-template-sidebar-right {
+	.grid_span(5);
+	.grid_right();
+	.grid_gap_left();
 }
 
 #mt-template-content {
