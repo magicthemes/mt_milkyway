@@ -3,6 +3,8 @@
 //@import "defaults/rhythm.less";
 //@import "defaults/grid.less";
 
+.reset();
+
 .grid_setup(960px, 24, 20px, left, 960px, 960px);
 
 body {
@@ -27,20 +29,22 @@ body {
 	.grid_left();
 	height: 115px;
 	border-bottom: 1px solid #ccc;
-	#mt-template-header-wrapper {		
-		.css3_linear_gradient(#fcfcfc, #e8e8e8);
-		.css3_border_radius(10px 10px 0 0);
-		background-color: #fff;
-		border: 1px solid #ccc;
-		margin: 5px;
-		height: 104px;
-		overflow: hidden;
-		#mt-template-header-content {
-			.grid_span(14);
-			.grid_right();
-			margin-right: 20px;
-		}
-	}
+}
+
+#mt-template-header-wrapper {		
+	.css3_linear_gradient(#fcfcfc, #e8e8e8);
+	.css3_border_radius(10px 10px 0 0);
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin: 5px;
+	height: 104px;
+	overflow: hidden;
+}
+
+#mt-template-header-content {
+	.grid_span(14);
+	.grid_right();
+	margin-right: 20px;
 }
 
 #mt-logo {
@@ -56,12 +60,10 @@ body {
 #mt-template-nav {
 	.grid();
 	.grid_left();
-	//height: 32px;
 	height: 25px;
 	text-align: center;
 
 	nav.sidebar {
-		//background: url(../images/mw_menu_cap_l.png) left top no-repeat;
 		height: 32px;
 		display: inline-block;
 		margin: 0 auto;
@@ -173,7 +175,7 @@ body {
 		//.column_separator { border-left: 1px dashed #e0e0e0; }
 	}
 
-	article#content-article { 
+	#content-article { 
 		.article_style1(); 
 		aside.toc {
 			.grid_right();
@@ -270,14 +272,13 @@ article.item {
 /* Sidebar */
 .sidebar {
 	margin-bottom: 20px;
-	> h1 { .componentheading(); color: #135cae;}
+	> h1 { .componentheading(); color: #135cae;margin: 0 0 10px 0;}
 }
 
 .sidebar._menu {
 	.css3_border_radius(10px);
 	background-color: #135cae;
 	padding: 7px;
-
 	> h1 { 
 		color: #eee !important;
 		font-size: 12px;
