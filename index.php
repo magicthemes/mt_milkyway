@@ -12,51 +12,51 @@ Alchemy::start($this);
 	echo Alchemy::call('html')->render('head');
 	?>
 </head>
-<body class="color_<?php echo $this->params->get('colorVariation'); ?> bg_<?php echo $this->params->get('backgroundVariation'); ?> width_<?php echo $this->params->get('widthStyle'); ?>">
+<body class="color_<?php echo $this->params->get('colorVariation'); ?> bg_<?php echo $this->params->get('backgroundVariation'); ?>">
 	<div id="mt-template">
 		<header id="mt-template-header">
 			<div id="mt-template-header-wrapper">
 				<a href="<?php echo $this->baseurl; ?>" id="mt-logo">Logo Title</a>
 				<div id="mt-template-header-content">
-					<jdoc:include type="modules" name="mt-top" style="nav" />					
+					<jdoc:include type="modules" name="top" style="nav" />					
 				</div>
 			</div>
 		</header>
 		<nav id="mt-template-nav">
-			<jdoc:include type="modules" name="mt-nav" style="nav" />
+			<jdoc:include type="modules" name="user3" style="nav" />
 		</nav>
 
 		<div id="mt-template-pathway">
 			<div id="mt-template-breadcrumb">
-				<jdoc:include type="modules" name="mt-breadcrumb" />
+				<jdoc:include type="modules" name="breadcrumb" />
 			</div>
 			<div id="mt-template-search">
-				<jdoc:include type="modules" name="mt-user4" style="section" />				
+				<jdoc:include type="modules" name="user4" style="section" />				
 			</div>
 		</div>
 
 		<div id="mt-template-wrapper">
 			<div id="mt-template-sidebar-left">
 				<div class="in">
-					<jdoc:include type="modules" name="mt-left" style="section" />
+					<jdoc:include type="modules" name="left" style="section" />
 					&nbsp;
 				</div>
 			</div>
 
-			<div id="mt-template-content" class="<?php echo ! $this->countModules('mt-right') ? 'wide' : ''; ?>">
+			<div id="mt-template-content" class="<?php echo ! $this->countModules('right') ? 'wide' : ''; ?>">
 				<div class="in">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>
 
 				<div id="mt-template-content-footer">
-					<jdoc:include type="modules" name="mt-footer" style="section" />
+					<jdoc:include type="modules" name="footer" style="section" />
 				</div>
 			</div>
 
 			<div id="mt-template-sidebar-right">
 				<div class="in">	
-					<jdoc:include type="modules" name="mt-right" style="section" />
+					<jdoc:include type="modules" name="right" style="section" />
 				</div>
 			</div>
 			<div class="clr"></div>
