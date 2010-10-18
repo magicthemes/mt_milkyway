@@ -1,0 +1,335 @@
+@import "../../../media/alchemy/less/initialize.less";
+@import "defaults/rhuk_styles.less";
+//@import "defaults/rhythm.less";
+//@import "defaults/grid.less";
+
+.grid_setup(960px, 24, 20px, left, 960px, 960px);
+
+body {
+	background: #0C3A6D;
+	color:#333333;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size:12px;
+	line-height:1.3em;
+}
+
+#mt-template {
+	.grid();
+	.css3_border_radius(10px);
+	.css3_box_shadow(0, 0, 10px, #000);
+	background-color: #f7f7f7;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#mt-template-header {
+	.grid();
+	.grid_left();
+	height: 115px;
+	border-bottom: 1px solid #ccc;
+	#mt-template-header-wrapper {		
+		.css3_linear_gradient(#fcfcfc, #e8e8e8);
+		.css3_border_radius(10px 10px 0 0);
+		background-color: #fff;
+		border: 1px solid #ccc;
+		margin: 5px;
+		height: 104px;
+		overflow: hidden;
+		#mt-template-header-content {
+			.grid_span(14);
+			.grid_right();
+			margin-right: 20px;
+		}
+	}
+}
+
+#mt-logo {
+	background: url(../images/mw_joomla_logo.png) no-repeat;
+	display: block;
+	height: 75px;
+	width: 298px;
+	margin: 10px 0 0 10px;
+	text-indent: -99999px;
+	.grid_left();
+}
+
+#mt-template-nav {
+	.grid();
+	.grid_left();
+	//height: 32px;
+	height: 25px;
+	text-align: center;
+
+	nav.sidebar {
+		//background: url(../images/mw_menu_cap_l.png) left top no-repeat;
+		height: 32px;
+		display: inline-block;
+		margin: 0 auto;
+
+		ul#mainlevel-nav {
+			border: 1px solid #ccc;
+			.css3_border_radius();
+			.css3_box_shadow(0, 0, 5px, #ccc);
+			//background: url(../images/mw_menu_cap_r.png) right top no-repeat;
+			background-color: #fff;
+			height: 23px;
+			list-style: none;
+			padding: 0 15px;
+			margin: -13px 0 0 0;
+
+			li {
+				.grid_left();
+				margin: 0;
+				border-right: 1px solid #ccc;
+
+				//background: url(../images/mw_menu_normal_bg.png) repeat-x;
+				a {
+					display: block;
+					padding: 0 20px;
+					height: 23px;
+					line-height: 23px;
+					color: black !important;
+					font-weight: bold;
+					text-decoration: none;
+				}
+				a:hover { color: #135cae !important; }
+			}
+			li:first-child {border-left: 1px solid #ccc;}
+		}
+	}
+
+}
+
+#mt-template-pathway {
+	.grid();
+	.grid_left();
+	height: 20px;
+	#mt-template-breadcrumb {
+		.grid_span(16);
+		.grid_left();
+		margin-left: 20px;
+	}
+	#mt-template-search {
+		.grid_span(5);
+		.grid_right();
+		margin-right: 20px;
+		div.search {
+			text-align: right;
+			input {
+				border: 1px solid #CCC;
+				width: 145px;
+			}
+		}
+	}
+}
+
+#mt-template-wrapper {
+	.css3_border_radius(10px);
+	.grid_left();
+	background-color: #fff !important;
+	border: 1px solid #ccc;
+	margin: 10px;
+	padding: 8px;
+}
+
+#mt-template-sidebar-right {
+	.grid_span(5);
+	.grid_left();
+	.grid_gap_left();
+}
+
+#mt-template-sidebar-left {
+	.grid_span(5);
+	.grid_left();
+	.grid_gap_right();
+}
+
+#mt-template-content {
+	border-right: 1px solid #ccc;
+	.grid_span(13);
+	.grid_left();
+	.grid_gap_both();
+	min-height: 300px;
+
+	section {
+		> h1 { .componentheading();color: #135cae; }
+		.content_column { .grid_left(); }
+		//.column_separator { border-left: 1px dashed #e0e0e0; }
+	}
+
+	article#content-article { 
+		.article_style1(); 
+		aside.toc {
+			.grid_right();
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin: 20px;
+		}
+	}
+
+	.pagination { text-align: center; }
+
+	#mt-template-content-footer {
+		margin: 20px;
+		.sidebar {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+#mt-template-content.wide { .grid_span(18);border-right: none; }
+
+#mt-template-footer {
+	.grid();
+	.grid_left();
+	border-top: 1px solid #ccc;
+	height: 50px;
+
+	#syndicate {
+		.grid_left();
+		margin-left: 20px;
+	}
+	#power_by {
+		.grid_right();
+		margin-right: 20px;
+	}
+}
+
+/* All Styles */
+
+a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+	color: #135cae;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #0b3768;
+}
+
+h1 {
+	font-family:Helvetica ,Arial,sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #666;
+}
+
+//contentheading
+h2 {
+	.contentheading();
+}
+
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+//componentheading
+h3 {
+	.componentheading();
+	color: #135cae;
+}
+
+fieldset { border: none; }
+
+ul { padding-left: 15px; }
+.clr { .clear(); }
+
+.small, .created_by, .created_date, .modified_date { .small_style(); }
+
+.banneritem img { display: block; margin: 0 auto;}
+
+img { border: none;}
+
+/**/
+
+/* Articles */
+article.item {
+	.article_style1();
+}
+/* End of Articles */
+
+/* Sidebar */
+.sidebar {
+	margin-bottom: 20px;
+	> h1 { .componentheading(); color: #135cae;}
+}
+
+.sidebar._menu {
+	.css3_border_radius(10px);
+	background-color: #135cae;
+	padding: 7px;
+
+	> h1 { 
+		color: #eee !important;
+		font-size: 12px;
+		margin: 0 15px 5px;
+	}
+	ul {
+		.css3_border_radius(10px);
+		background-color: #fff;
+		margin: 0;
+		padding: 8px;
+		padding-left: 25px;
+	}
+
+	a {
+		font-weight: bold !important;
+	}
+}
+
+/* end of Sidebar */
+
+/* Poll */
+.poll {
+	h2 {
+		font-size: 12px;
+		font-weight: bold;
+	}
+	ul { list-style: none;}
+}
+/* end of Poll */
+
+/* Presets */
+.color_blue {
+	.sidebar._menu { background-color: #135cae;}
+}
+.color_red {
+	#mt-template-content section > h1 { color: #a10f15;}
+	.sidebar._menu { background-color: #a10f15;}
+	.sidebar > h1 { color: #a10f15;}
+	a:link, a:visited { color: #a10f15; }
+	a:hover { color: #7b0b12; }
+}
+.color_green {
+	#mt-template-content section > h1 { color: #4ba123;}
+	.sidebar._menu { background-color: #4ba123;}
+	.sidebar > h1 { color: #4ba123;}
+	a:link, a:visited { color: #4ba123; }
+	a:hover { color: #316b16; }
+}
+.color_orange {
+	#mt-template-content section > h1 { color: #cd6620;}
+	.sidebar._menu { background-color: #cd6620;}
+	.sidebar > h1 { color: #cd6620;}
+	a:link, a:visited { color: #cd6620; }
+	a:hover { color: #ac5419; }
+}
+.color_black {
+	.sidebar._menu { background-color: #333;}
+}
+.color_white {
+	.sidebar._menu { background-color: #e7e7e7;}
+}
+
+.bg_blue { background-color: #0c3acd; }
+.bg_red { background-color: #640b0f; }
+.bg_green { background-color: #316b16; }
+.bg_orange { background-color: #ac5419; }
+.bg_black { background-color: #333; }
+.bg_white { background-color: #fff; }
+/* end of Presets */
+
+
