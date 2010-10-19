@@ -15,64 +15,64 @@ Alchemy::start($this);
 <body class="color_<?php echo $this->params->get('colorVariation'); ?> bg_<?php echo $this->params->get('backgroundVariation'); ?>">
 	<div id="mt-template">
 		<header id="mt-template-header">
-			<div id="mt-template-header-wrapper">
+			<div class="wrapper">
 				<a href="<?php echo $this->baseurl; ?>" id="mt-logo">Logo Title</a>
-				<div id="mt-template-header-content">
-					<jdoc:include type="modules" name="top" style="nav" />					
+				<div id="mt-template-header-sidebartop">
+					<jdoc:include type="modules" name="top" style="section" />					
 				</div>
 			</div>
 		</header>
-		<nav id="mt-template-nav">
+		<nav id="mt-template-sidebarnav">
 			<jdoc:include type="modules" name="user3" style="nav" />
 		</nav>
 
 		<div id="mt-template-pathway">
-			<div id="mt-template-breadcrumb">
+			<div id="mt-template-pathway-sidebarbreadcrumb">
 				<jdoc:include type="modules" name="breadcrumb" />
 			</div>
-			<div id="mt-template-search">
-				<jdoc:include type="modules" name="user4" style="section" />				
+			<div id="mt-template-pathway-sidebarsearch">
+				<jdoc:include type="modules" name="user4" />				
 			</div>
 		</div>
 
-		<div id="mt-template-wrapper">
-			<div id="mt-template-sidebar-left">
+		<div id="mt-template-body"> 
+			<div id="mt-template-body-sidebarleft">
 				<div class="in">
 					<jdoc:include type="modules" name="left" style="section" />
 					&nbsp;
 				</div>
 			</div>
 
-			<div id="mt-template-main">
+			<div id="mt-template-body-main">
 
 				<?php if ($this->countModules('user1') OR $this->countModules('user2')): ?>
-				<div id="mt-template-box1">
-					<jdoc:include type="modules" name="user1" style="section" />
+				<div class="wrapper">
+					<div id="mt-template-body-main-sidebaruser1">
+						<jdoc:include type="modules" name="user1" style="section" />
+					</div>
+					<div id="mt-template-body-main-sidebaruser2">
+						<jdoc:include type="modules" name="user2" style="section" />
+					</div>
 				</div>
-				<div id="mt-template-box2">
-					<jdoc:include type="modules" name="user2" style="section" />
-				</div>
-				<div class="maindivider"></div>
 				<?php endif; ?>
-				<div id="mt-template-content" class="<?php echo ! $this->countModules('right') ? 'wide' : ''; ?>">
+				<div id="mt-template-body-main-content" class="<?php echo ! $this->countModules('right') ? 'wide' : ''; ?>">
 					<div class="in">
 						<jdoc:include type="message" />
 						<jdoc:include type="component" />
 					</div>
 
-					<div id="mt-template-content-footer">
+					<div id="mt-template-body-main-content-footer">
 						<jdoc:include type="modules" name="footer" style="section" />
 					</div>
 				</div>
 
-				<div id="mt-template-sidebar-right">
+				<div id="mt-template-body-main-sidebarright">
 					<div class="in">	
 						<jdoc:include type="modules" name="right" style="section" />
 					</div>
 				</div>
 			
 			</div>
-			<div class="clr"></div>
 		</div>
 		
 		<footer id="mt-template-footer">
