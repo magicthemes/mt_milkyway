@@ -1,5 +1,6 @@
 @import "../../../media/alchemy/less/initialize.less";
 @import "defaults/rhuk_styles.less";
+@import "defaults/screens.less";
 
 .reset();
 
@@ -82,8 +83,9 @@ body {
 	.grid_left();
 	height: 115px;
 	border-bottom: 1px solid #ccc;
-
+	background: #fff;
 	position: relative;
+	.css3_border_radius(10px 10px 0 0);
 
 	.wrapper {
 		.css3_linear_gradient(#fcfcfc, #e8e8e8);
