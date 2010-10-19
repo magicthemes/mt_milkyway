@@ -80,8 +80,7 @@ Alchemy::start($this);
 				<jdoc:include type="modules" name="syndicate" />
 			</p>
 			<p class="powered_by">
-			 	<?php echo JText::_('Powered by') ?> <a href="http://www.joomla.org">Joomla!</a>.
-				<?php echo JText::_('Valid') ?> <a href="http://validator.w3.org/check/referer">XHTML</a> <?php echo JText::_('and') ?> <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>.
+			 	<?php echo JText::_('Powered by') ?> <a href="http://www.joomla.org">Joomla!</a> and <a href="http://magicthemes.com" target="_new">MagicThemes</a> Alchemy Framework
 			</p>
 		</footer>
 	</div>
