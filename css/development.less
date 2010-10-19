@@ -21,8 +21,6 @@ a:hover {
 
 p { margin: 5px 0 10px 0; }
 
-li {list-style-type: circle; list-style-image: url(../images/indent3.png);}
-
 h1,h2,h3,h4,h5,h6 { margin: 5px 0 10px 0;}
 
 h1 {
@@ -49,6 +47,9 @@ h3 {
 fieldset { border: none; }
 
 ul { padding-left: 15px; }
+
+li {	list-style-type: circle;list-style-image: url(../images/indent3.png);}
+
 .clr { .clear(); }
 
 .small, .created_by, .created_date, .modified_date { .small_style(); }
@@ -115,7 +116,7 @@ body {
 	height: 32px;
 	text-align: center;
 	margin-top: -13px;
-	
+
 	nav.sidebar {
 		display: inline-block;
 		margin: 0 auto;
@@ -123,12 +124,18 @@ body {
 		ul#mainlevel-nav {
 			border: 1px solid #ccc;
 			.css3_border_radius();
-			.css3_box_shadow(0, 0, 5px, #ccc);
-			.css3_linear_gradient(#fcfcfc, #e8e8e8);
+			.css3_box_shadow(0, 0, 8px, #ccc);
 			height: 23px;
 			list-style: none;
 			padding: 0 15px;
 			margin: 0;
+
+			background: #FBFBFB; /* old browsers */
+			background: -moz-linear-gradient(top, #FBFBFB 0%, #F3F3F3 50%, #E7E7E7 51%, #FCFCFC 100%); /* firefox */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(50%,#F3F3F3), color-stop(51%,#E7E7E7), color-stop(100%,#FCFCFC)); /* webkit */
+			-pie-background: linear-gradient(top, #FBFBFB 0%, #F3F3F3 50%, #E7E7E7 51%, #FCFCFC 100%); /* ie */
+			behavior: e(%("url(%s/alchemy/js/PIE.txt.htc)", get_variable('media_url')));
+
 			li {
 				.grid_left();
 				margin: 0;
@@ -318,7 +325,7 @@ article.item {
 
 .color_blue {
 	.sidebar._menu { background-color: #135cae;}
-	a.title h1 {color: #135cae;}
+	article.item header a.title h1 {color: #135cae;}
 }
 .color_red {
 	#mt-template-content section > h1 { color: #a10f15;}
@@ -326,7 +333,7 @@ article.item {
 	.sidebar > h1 { color: #a10f15;}
 	a:link, a:visited { color: #a10f15; }
 	a:hover { color: #7b0b12; }
-	a.title h1 {color: #a10f15}
+	article.item header a.title h1 {color: #a10f15}
 }
 .color_green {
 	#mt-template-content section > h1 { color: #4ba123;}
@@ -342,15 +349,15 @@ article.item {
 	.sidebar > h1 { color: #cd6620;}
 	a:link, a:visited { color: #cd6620; }
 	a:hover { color: #ac5419; }
-	a.title h1 {color: #cd6620;}
+	article.item header a.title h1 {color: #cd6620;}
 }
 .color_black {
 	section.sidebar._menu { background-color: #333;}
-	a.title h1 {color: #135cae;}
+	article.item header a.title h1 {color: #135cae;}
 }
 .color_white {
 	section.sidebar._menu { background-color: #e7e7e7;}
-	a.title h1 {color: #135cae;}
+	article.item header a.title h1 {color: #135cae;}
 }
 
 .bg_blue { background: #0c3a6d; }
@@ -360,3 +367,10 @@ article.item {
 .bg_black { background-color: #333; }
 .bg_white { background-color: #fff; }
 /* end of Presets */
+
+/* ie7 */
+
+.ie7 {
+/*	ul {border: 1px solid green;padding-left: 30px;list-style-position: outside;}
+	li {border: 1px solid blue;padding-left: 15px;}*/
+}
