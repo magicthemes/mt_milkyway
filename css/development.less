@@ -67,6 +67,7 @@ body {
 	font-family:Helvetica,Arial,sans-serif;
 	font-size:12px;
 	line-height:1.3em;
+	padding: 20px 0;
 }
 
 #mt-template {
@@ -74,8 +75,6 @@ body {
 	.css3_border_radius(10px);
 	.css3_box_shadow(0, 0, 10px, #000);
 	background-color: #f7f7f7;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 #mt-template-header {
@@ -95,6 +94,7 @@ body {
 		margin: 5px;
 		height: 104px;
 		overflow: hidden;
+		position: relative;
 	}
 }
 
@@ -407,6 +407,7 @@ footer.pagination {
 /* ie7 */
 
 .ie7 {
-/*	ul {border: 1px solid green;padding-left: 30px;list-style-position: outside;}
-	li {border: 1px solid blue;padding-left: 15px;}*/
+	#mt-template-header {
+		.wrapper { .grid_left(); }
+	}
 }
